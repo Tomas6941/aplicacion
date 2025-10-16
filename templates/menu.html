@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal - Cochera</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}?v=1">
+
+
+</head>
+<body>
+    <div class="cont">
+        <h1>Sistema de Cochera</h1>
+        <h3>Selecciona una opción:</h3>
+
+        <a href="{{ url_for('add_auto') }}"><button>Añadir Auto</button></a>
+        <a href="{{ url_for('list_autos') }}"><button>Lista de Autos</button></a>
+    </div>
+</body>
+</html>

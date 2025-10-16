@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir Auto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css') }}?v=1">
+</head>
+<body>
+    <div class="cont">
+        <h1>Registrar un nuevo auto</h1>
+        <form method="POST">
+            <label>Marca:</label><input type="text" name="marca" required><br>
+            <label>Modelo:</label><input type="text" name="modelo"><br>
+            <label>Patente:</label><input type="text" name="patente" required><br>
+            <label>DNI:</label><input type="text" name="dni" required><br>
+            <label>Teléfono:</label><input type="text" name="telefono"><br>
+            <label>Horas a estar:</label><input type="text" name="horas_a_estar"><br>
+            <label>Precio cobrado:</label><input type="text" name="precio_cobrado"><br>
+            <label>Retirado:</label>
+            <select name="retirado">
+                <option value="No">No</option>
+                <option value="Sí">Sí</option>
+            </select><br>
+            <button class="btn1" type="submit">Guardar</button>
+        </form>
+
+        <a href="{{ url_for('menu') }}"><button class="btn1">Volver al menú</button></a>
+    </div>
+</body>
+</html>

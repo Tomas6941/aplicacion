@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Autos</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+</head>
+<body>
+    <h1>Autos registrados</h1>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Patente</th>
+            <th>DNI</th>
+            <th>Teléfono</th>
+            <th>Horas</th>
+            <th>Precio</th>
+            <th>Retirado</th>
+            <th>Acciones</th>
+        </tr>
+        {% for auto in autos %}
+        <tr>
+            <td>{{ auto[0] }}</td>
+            <td>{{ auto[1] }}</td>
+            <td>{{ auto[2] }}</td>
+            <td>{{ auto[3] }}</td>
+            <td>{{ auto[4] }}</td>
+            <td>{{ auto[5] }}</td>
+            <td>{{ auto[6] }}</td>
+            <td>{{ auto[7] }}</td>
+            <td>{{ auto[8] }}</td>
+            <td>{{ auto[9] }}</td>
+            <td>{{ auto[10] }}</td>
+            <td>
+                <a href="{{ url_for('edit_auto', id=auto[0]) }}"><button>Editar</button></a>
+                <a href="{{ url_for('delete_auto', id=auto[0]) }}" onclick="return confirm('¿Seguro que querés borrar este auto?');"><button>Borrar</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{{ url_for('menu') }}"><button>Volver al menú</button></a>
+</body>
+</html>
