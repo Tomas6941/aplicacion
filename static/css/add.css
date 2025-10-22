@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cont {
+    background-color: #ffffff;
+    width: 500px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.cont h1,
+.cont h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.cont button {
+    align-self: center;
+}
+
+.btn1 {
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a > button {
+    width: 100%;
+    margin-top: 1rem;
+}
